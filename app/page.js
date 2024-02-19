@@ -101,7 +101,7 @@ export default function Home() {
             our advanced statistics dashboard.
           </p>
         </div>
-        <div className="max-w-7xl m-auto flex justify-between mt-20">
+        <div className="max-w-7xl m-auto flex max-md:flex-col max-md:gap-20 justify-between mt-20">
           <div className="bg-white p-7 relative max-w-96 rounded-md">
             <div className="rounded-full bg-very_dark_violet h-20 w-20 top-[-35px] absolute flex items-center justify-center">
               <Image
@@ -172,9 +172,9 @@ export default function Home() {
         </div>
       </section>
       <footer className="bg-very_dark_violet p-16 pb-24">
-        <div className="flex justify-between max-w-7xl m-auto">
+        <div className="flex justify-between max-w-7xl m-auto max-md:flex-col max-md:gap-10">
           <WhiteLogo />
-          <div className="flex gap-16">
+          <div className="flex gap-16 max-md:flex-col">
             <div className="flex flex-col gap-3">
               <Link href="/features" className="text-white mb-3">
                 Features
