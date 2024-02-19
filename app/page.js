@@ -2,7 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import WhiteLogo from "@/public/logo-white.svg";
 import Logo from "@/public/logo.svg";
+import FacebookLogo from "@/public/icon-facebook.svg";
+import TwitterLogo from "@/public/icon-twitter.svg";
+import PinterestLogo from "@/public/icon-pinterest.svg";
+import InstagramLogo from "@/public/icon-instagram.svg";
 import shorten from "@/app/lib/shortener";
 
 export default function Home() {
@@ -72,7 +77,7 @@ export default function Home() {
           width={1000}
           height={1000}
           className="absolute top-0 left-0 z-0 bg-cover w-full h-full"
-        ></Image>
+        />
         <div className="flex gap-5 justify-between">
           <input
             placeholder="Shorten a link here..."
@@ -168,7 +173,7 @@ export default function Home() {
       </section>
       <footer className="bg-very_dark_violet p-16 pb-24">
         <div className="flex justify-between max-w-7xl m-auto">
-          <Logo color="white" />
+          <WhiteLogo />
           <div className="flex gap-16">
             <div className="flex flex-col gap-3">
               <Link href="/features" className="text-white mb-3">
@@ -241,13 +246,10 @@ export default function Home() {
             </div>
           </div>
           <div className="flex gap-5">
-            <Image
-              src="/icon-facebook.svg"
-              alt="Facebook Icon"
-              width={100}
-              height={100}
-              className="h-full w-full"
-            />
+            <FacebookLogo />
+            <TwitterLogo />
+            <PinterestLogo />
+            <InstagramLogo />
           </div>
         </div>
       </footer>
