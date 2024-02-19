@@ -66,14 +66,21 @@ export default function Home() {
         />
       </main>
       <div className="max-w-7xl m-auto mb-[-50px] z-10 mt-40 p-12 rounded-lg bg-dark_violet flex relative">
+        <Image
+          src="/bg-shorten-desktop.svg"
+          alt=""
+          width={1000}
+          height={1000}
+          className="absolute top-0 left-0 z-0 bg-cover w-full h-full"
+        ></Image>
         <div className="flex gap-5 justify-between">
           <input
             placeholder="Shorten a link here..."
-            className="rounded-md grow-[3] h-full pl-4"
+            className="rounded-md grow-[3] h-full pl-4 z-10"
             id="link_input"
           />
           <button
-            className="bg-cyan py-4 px-7 h-full rounded-md text-white font-bold shrink-0 block"
+            className="bg-cyan py-4 px-7 h-full rounded-md text-white font-bold shrink-0 block z-10"
             onClick={() => shorten()}
           >
             Shorten it!
@@ -142,8 +149,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-dark_violet">
-        <div className="max-w-7xl m-auto text-center py-20">
+      <section className="bg-dark_violet relative">
+        <Image
+          src="/bg-boost-desktop.svg"
+          alt=""
+          width={100}
+          height={100}
+          className="absolute top-0 left-0 w-full h-full bg-cover z-0"
+        />
+        <div className="max-w-7xl m-auto text-center py-20 z-10 relative">
           <h1 className="font-bold text-4xl text-white">
             Boost your links today
           </h1>
