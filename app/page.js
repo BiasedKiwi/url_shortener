@@ -138,7 +138,7 @@ export default function Home() {
           height={100}
           className="absolute top-0 left-0 z-0 w-full h-full"
         />
-        <div className="flex gap-5 justify-between max-md:flex-col max-md:m-auto">
+        <div className="flex w-full gap-5 justify-between max-md:flex-col max-md:m-auto">
           <input
             placeholder="Shorten a link here..."
             className="rounded-md grow-[3] h-full pl-4 z-10 max-md:py-4 max-md:align-middle max-md:w-full"
