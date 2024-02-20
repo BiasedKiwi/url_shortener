@@ -12,6 +12,15 @@ import shorten from "@/app/lib/shortener";
 
 export default function Home() {
   const [hamburgerMenu, setHamburgerMenu] = react.useState("");
+
+  react.useEffect(() => {
+    if (window.screen.width > 768) {
+      setHamburgerMenu("hidden");
+    } else {
+      setHamburgerMenu("");
+    }
+  }, []);
+
   react.useEffect(() => {
     window.addEventListener("resize", () => {
       if (window.screen.width > 768) {
