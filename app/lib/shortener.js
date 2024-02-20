@@ -1,5 +1,5 @@
 // https://cleanuri.com/api/v1/shorten
-const shortener_url = "localhost:8010/proxy/api/v1/shorten";
+const shortener_url = "https://cleanuri.com/api/v1/shorten";
 
 export default function shorten() {
   const link = document.querySelector("#link_input").value;
@@ -12,4 +12,5 @@ export default function shorten() {
       "Content-type": "application/json; charset=UTF-8",
     },
   });
+  console.log(response)
 }
