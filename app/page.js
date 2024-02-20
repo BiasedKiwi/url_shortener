@@ -149,6 +149,7 @@ export default function Home() {
         />
         <div className="flex w-full gap-5 justify-between max-md:flex-col max-md:m-auto">
           <input
+            type="text"
             placeholder="Shorten a link here..."
             className="rounded-md grow-[3] h-full pl-4 z-10 max-md:py-4 max-md:align-middle max-md:w-full"
             id="link_input"
