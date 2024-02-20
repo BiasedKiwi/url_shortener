@@ -9,7 +9,6 @@ import TwitterLogo from "@/public/icon-twitter.svg";
 import PinterestLogo from "@/public/icon-pinterest.svg";
 import InstagramLogo from "@/public/icon-instagram.svg";
 import shorten from "@/app/lib/shortener";
-import toggleMobileMenu from "@/app/lib/mobile_menu";
 
 export default function Home() {
   const [hamburgerMenu, setHamburgerMenu] = react.useState("");
