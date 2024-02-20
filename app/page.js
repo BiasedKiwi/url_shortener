@@ -1,16 +1,29 @@
 "use client";
 
 import Image from "next/image";
+import react from "react";
 import Link from "next/link";
 import WhiteLogo from "@/public/logo-white.svg";
-import Logo from "@/public/logo.svg";
 import FacebookLogo from "@/public/icon-facebook.svg";
 import TwitterLogo from "@/public/icon-twitter.svg";
 import PinterestLogo from "@/public/icon-pinterest.svg";
 import InstagramLogo from "@/public/icon-instagram.svg";
 import shorten from "@/app/lib/shortener";
+import toggleMobileMenu from "@/app/lib/mobile_menu";
 
 export default function Home() {
+  const [hamburgerMenu, setHamburgerMenu] = react.useState("");
+  react.useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.screen.width > 768) {
+        setHamburgerMenu("hidden");
+      } else {
+        setHamburgerMenu("");
+      }
+    });
+  }, []);
+  const [mobileNav, setMobileNav] = react.useState("hidden");
+
   return (
     <>
       <nav className="max-w-7xl m-auto my-10 flex justify-between items-center antialiased max-md:mx-6">
@@ -47,7 +60,19 @@ export default function Home() {
           </button>
         </div>
         {/* Mobile Nav */}
-        <div id="hamburgerMenu">
+        <div
+          id="hamburgerMenu"
+          className={hamburgerMenu}
+          onClick={() =>
+            setMobileNav((prev) => {
+              if (prev == "hidden") {
+                return "";
+              } else {
+                return "hidden";
+              }
+            })
+          }
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -63,26 +88,26 @@ export default function Home() {
             />
           </svg>
         </div>
-        <div className="hidden" id="mobileNav">
-          <div className="max-md:bg-dark_violet text-white font-bold text-lg gap-5 rounded-lg flex flex-col items-center justify-between absolute px-10 py-10 top-28 mx-5 left-0 right-0">
-            <div className="flex flex-col gap-7 items-center">
-              <Link href="/features">Features</Link>
-              <Link href="/pricing">Pricing</Link>
-              <Link href="/resources">Resources</Link>
-            </div>
-            <div className="bg-slate-500 w-full h-[1px]" />
-            <div className="flex flex-col items-center gap-7">
-              <Link href="/login">Login</Link>
-              <button
-                onClick={() => console.log("Clicked")}
-                className="bg-cyan py-3 px-6 rounded-full text-white font-bold"
-              >
-                Sign Up
-              </button>
-            </div>
+      </nav>
+      <div className={mobileNav} id="mobileNav">
+        <div className="max-md:bg-dark_violet text-white font-bold text-lg gap-5 rounded-lg flex flex-col items-center justify-between absolute px-10 py-10 top-28 mx-5 left-0 right-0">
+          <div className="flex flex-col gap-7 items-center">
+            <Link href="/features">Features</Link>
+            <Link href="/pricing">Pricing</Link>
+            <Link href="/resources">Resources</Link>
+          </div>
+          <div className="bg-slate-500 w-full h-[1px]" />
+          <div className="flex flex-col items-center gap-7">
+            <Link href="/login">Login</Link>
+            <button
+              onClick={() => console.log("Clicked")}
+              className="bg-cyan py-3 px-6 rounded-full text-white font-bold"
+            >
+              Sign Up
+            </button>
           </div>
         </div>
-      </nav>
+      </div>
       <main className="flex flex-row max-lg:flex-col-reverse max-w-7xl m-auto justify-between max-md:text-center">
         <div>
           <h1 className="text-7xl font-bold mt-28 leading-tight antialiased max-md:text-5xl max-md:mt-12">
