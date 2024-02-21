@@ -46,3 +46,7 @@ Users should be able to:
 ### What I learned
 
 This was my first ever project using next.js and I learned lots of things about it. I also got good practice with my React and Tailwind skills.
+
+### License
+
+See ![LICENSE](LICENSE)
