@@ -40,7 +40,6 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Flexbox
-- CSS Grid
 - [React](https://react.dev/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 
